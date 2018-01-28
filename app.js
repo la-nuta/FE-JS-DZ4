@@ -121,8 +121,6 @@
 
     function isWinner(card1, card2) {
         if (isTrump(card1) && !isTrump(card2)) {
-            console.log("card1.isTrump(result, playingCardsArray) " + isTrump(card1));
-            console.log("card2.isTrump(result, playingCardsArray) " + isTrump(card2));
 
             return true;
         } else if (!isTrump(card1) && !isTrump(card2) || isTrump(card1) && isTrump(card2)) {
@@ -162,8 +160,6 @@
         td2.classList.add('td');
         user1.currentCard = user1.currentCardsArray.pop();
         user2.currentCard = user2.currentCardsArray.pop();
-        console.log("user1.currentCard " + user1.currentCard.suitCodeWord);
-        console.log("user2.currentCard " + user2.currentCard.suitCodeWord);
 
         td1.textContent = String.fromCodePoint(user1.currentCard.cardName);
         td2.textContent = String.fromCodePoint(user2.currentCard.cardName);

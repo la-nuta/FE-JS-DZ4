@@ -1,9 +1,100 @@
+body {
+    background-color: #e7fbef;
+}
+
+#trump {
+    width: 200px;
+    height: 200px;
+    box-sizing: border-box;
+    margin: 10px auto;
+    padding: 0;
+    border-radius: 50%;
+    font-size: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#spades, #hearts, #diamonds, #clubs {
+    width: 50%;
+    height: 50%;
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0;
+    font-size: 60px;
+    text-align: center;
+}
+
+#spades, #hearts {
+    line-height: 200%;
+}
+
+#spades, #clubs {
+    background-color: #e1e1e1;
+}
+
+#hearts, #diamonds {
+    color: red;
+    background-color: #ababab;
+}
+
+#diamonds, #clubs {
+    line-height: 170%;
+}
+
+#spades {
+    border-radius: 100% 0 0 0;
+}
+
+#hearts {
+    border-radius: 0 100% 0 0;
+}
+
+#diamonds {
+    border-radius: 0 0 0 100%;
+}
+
+#clubs {
+    border-radius: 0 0 100% 0;
+}
+
+#spades.chosenSuit, #hearts.chosenSuit, #diamonds.chosenSuit, #clubs.chosenSuit {
+    background-color: rgba(249, 247, 7, 0.5);
+}
+
+#play {
+    margin: 10px auto;
+    width: 100px;
+    height: 40px;
+    background-color: rgba(249, 247, 7, 0.5);
+    display: block;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 25px;
+    color: #535353;
+    border: solid 1px #ababab;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+#play:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(155, 155, 155, 0.5);
+}
+
+#play:active {
+    box-shadow: inset;
+}
+
 #winnerTrumpDiv, #scoreDiv, #table {
     margin: auto;
     height: 40px;
     border-collapse: collapse;
     font-size: 20px;
     text-align: center;
+    font-family: sans-serif;
+}
+
+#table {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 #winnerSpan {
@@ -20,18 +111,44 @@
     display: inline-block;
     box-sizing: border-box;
     padding: 10px;
+}
 
+.row:nth-child(odd) {
+    background-color: #f4f4f4;
+}
+
+.row:nth-child(even) {
+    background-color: #FFFFFF;
 }
 
 .td-name {
     width: 150px;
-    border: solid 1px;
+    height: 30px;
+    border: solid 1px #b4b4b4;
     text-align: center;
+    font-weight: bold;
+    background-color: #d9d9d9;
+}
+
+#continueDiv {
+    font-size: 20px;
+    text-align: center;
+    height: 30px;
+    color: #535353;
+    margin: 10px auto;
+    width: 200px;
+    line-height: 30px;
 }
 
 .td {
     width: 150px;
-    border: solid 1px;
+    border: solid 1px #b4b4b4;
     text-align: center;
-    font-size: 70px;
+    font-size: 80px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.red {
+    color: red;
 }

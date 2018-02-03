@@ -172,7 +172,8 @@
             document.body.appendChild(fragment);
         }
 
-        if (event.target !== playButton) if (user1.currentCardsArray.length >= 1) {
+        if (event.target !== playButton && document.getElementById('table'))
+        {if (user1.currentCardsArray.length >= 1) {
             let table = document.getElementById('table'),
                 row = document.createElement('tr'),
                 td1 = document.createElement('td'),
@@ -219,5 +220,5 @@
             }
             scoreDiv.textContent = `${user1.score} : ${user2.score}`;
         }
-    })
+    }})
 }());
